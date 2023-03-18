@@ -1,5 +1,5 @@
 # CppZoo
-Mid-Term Project
+// Mid-Term Project
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -9,7 +9,7 @@ Mid-Term Project
 
 using namespace std;
 
-// Constants for animal types and their habitats
+
 const string HYENA = "hyena";
 const string LION = "lion";
 const string BEAR = "bear";
@@ -19,19 +19,19 @@ const string LION_HABITAT = "Lion Habitat";
 const string BEAR_HABITAT = "Bear Habitat";
 const string TIGER_HABITAT = "Tiger Habitat";
 
-// Arrays for animal names
+
 const string HYENA_NAMES[11] = {"Shenzi", "Banzai", "Ed", "Zig", "Bud", "Lou", "Kamari", "Wema", "Nne", "Madoa", "Prince Nevarah"};
 const string LION_NAMES[12] = {"Scar", "Mufasa", "Simba", "Kiara", "King", "Drooper", "Kimba", "Nala", "Leo", "Samson", "Elsa", "Cecil"};
 const string BEAR_NAMES[10] = {"Yogi", "Smokey", "Paddington", "Lippy", "Bungle", "Baloo", "Rupert", "Winnie the Pooh", "Snuggles", "Bert"};
 const string TIGER_NAMES[10] = {"Tony", "Tigger", "Amber", "Cosimia", "Cuddles", "Dave", "Jiba", "Rajah", "Rayas", "Ryker"};
 
-// Function to parse input data and return animal information
+
 string* parseAnimalData(string data) {
     string* animalData = new string[6];
     stringstream ss(data);
     string temp;
 
-    // Extract age, sex, species, color, weight, and origin
+   
     getline(ss, temp, ' ');
     animalData[0] = temp; // age
     getline(ss, temp, ' ');
@@ -48,7 +48,7 @@ string* parseAnimalData(string data) {
     return animalData;
 }
 
-// Function to calculate and return a random birth date
+
 string calculateBirthDate() {
     time_t now = time(0);
     tm *ltm = localtime(&now);
